@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import Navbar from "./Components/Navbar";
 import News from "./Components/News";
+import About from "./Components/About";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 
@@ -35,7 +36,13 @@ function App() {
               />
             }
           />
-          <Route exact path="/about" element={<p>About page</p>}></Route>
+          <Route 
+            exact 
+            path="/about" 
+            element={
+              <About />
+            } 
+          />
           <Route
             exact
             path="/business"
