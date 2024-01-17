@@ -13,14 +13,12 @@ const News = (props) => {
 
   const updateNews = async () => {
     props.setProgress(10);
-    console.log("updatepage");
     const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&pageSize=${props.pageSize}&page=${page}`;
     setLoading(true);
     let data = await fetch(url);
     props.setProgress(30);
     let parseData = await data.json();
     props.setProgress(50);
-    console.log(parseData);
     setArticles(parseData.articles);
     setLoading(false);
     setArticleCover(articleCover + props.pageSize);
@@ -29,7 +27,6 @@ const News = (props) => {
   };
 
   useEffect(() => {
-    console.log("Useeffect");
     document.title = `News Monkey - ${props.category[0].toUpperCase() + props.category.slice(1)
       }`;
     updateNews();
@@ -43,7 +40,6 @@ const News = (props) => {
     setPage(page + 1);
     let data = await fetch(url);
     let parseData = await data.json();
-    console.log(parseData);
     setArticles(articles.concat(parseData.articles));
     setArticleCover(articleCover + props.pageSize);
     setArticleSize(parseData.totalResults);
