@@ -6,7 +6,6 @@ const NewsItem = (props) => {
   return (
     <div>
       <div className="card">
-        {/* batch bootstrap */}
         <span
           className="position-absolute top-0 translate-middle badge rounded-pill bg-danger"
           style={{ zIndex: "1", left: "50%" }}
@@ -14,14 +13,13 @@ const NewsItem = (props) => {
           {source === null
             ? source
             : source.name === null
-            ? "Unknown"
-            : source.name}
+              ? "Unknown"
+              : source.name}
           <span className="visually-hidden">Article source</span>
         </span>
         <img src={imgUrl} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{title}...</h5>
-          {/* <span className="badge rounded-pill text-bg-success">{source === null ? source : (source.name === null ? "Unknown" : source.name)}</span><br/><br/> */}
           <p className="card-text">{description}...</p>
           <p className="card-text">
             <small className="text-body-secondary">
@@ -29,7 +27,6 @@ const NewsItem = (props) => {
               date: {new Date(date).toUTCString()}
             </small>
           </p>
-          {/* .toUTCstring() is a time method  */}
           <a
             href={newsUrl}
             rel="noreferrer"

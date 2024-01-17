@@ -10,9 +10,6 @@ const News = (props) => {
   const [page, setPage] = useState(1);
   const [articleCover, setArticleCover] = useState(0);
   const [articleSize, setArticleSize] = useState(0);
-  // document.title = `News Monkey - ${
-  //   props.category[0].toUpperCase() + props.category.slice(1)
-  // }`;
 
   const updateNews = async () => {
     props.setProgress(10);
@@ -33,36 +30,16 @@ const News = (props) => {
 
   useEffect(() => {
     console.log("Useeffect");
-    document.title = `News Monkey - ${
-      props.category[0].toUpperCase() + props.category.slice(1)
-    }`;
+    document.title = `News Monkey - ${props.category[0].toUpperCase() + props.category.slice(1)
+      }`;
     updateNews();
     // eslint-disable-next-line
   }, []);
 
-  // async componentDidMount() {
-  //   console.log("cdm");
-  //   updateNews();
-  // }
-
-  // const handleNextClick = async () => {
-  //   console.log("Next");
-  //   setPage(page + 1);
-  //   updateNews();
-  // };
-
-  // const handlePrevClick = async () => {
-  //   console.log("Prev");
-  //   setPage(page - 1);
-  //   updateNews();
-  // };
-
   const fetchMoreData = async () => {
-    const url = `https://newsapi.org/v2/top-headlines?country=${
-      props.country
-    }&category=${props.category}&apiKey=${props.apiKey}&pageSize=${
-      props.pageSize
-    }&page=${page + 1}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${props.country
+      }&category=${props.category}&apiKey=${props.apiKey}&pageSize=${props.pageSize
+      }&page=${page + 1}`;
     setPage(page + 1);
     let data = await fetch(url);
     let parseData = await data.json();
@@ -74,7 +51,7 @@ const News = (props) => {
 
   return (
     <div className="container my-3" style={{ textAlign: "center" }}>
-      <h1 style={{ padding: "20px", fontFamily: "fantasy", marginTop: "85px"}}>
+      <h1 style={{ padding: "20px", fontFamily: "fantasy", marginTop: "85px" }}>
         NewsMonkey - TOP HEADLINES!
       </h1>
       <h1 style={{ marginBottom: "30px", fontFamily: "fantasy" }}>
@@ -94,7 +71,6 @@ const News = (props) => {
       >
         <div className="container">
           <div className="row my-3">
-            {/* {loading === false && articles.map((element) => { */}
             {articles.map((element) => {
               return (
                 <div className="col-md-4 my-2" key={element.url}>
@@ -132,11 +108,6 @@ const News = (props) => {
         </div>
       </InfiniteScroll>
 
-      {/* <div className='container d-flex justify-content-between my-5'>
-          <button disabled={page <= 1} type="button" className="btn btn-primary" onClick={handlePrevClick}>&larr; Previous</button>
-          <p style={{textAlign: 'center', fontFamily: 'inherit'}}>Page {page <= 1 ? "" : "1.."}<strong>{page}</strong>{page >= Math.floor(articleSize/props.pageSize) ? "" : (".." + Math.floor(articleSize/props.pageSize))}</p>
-          <button disabled={articleCover >= articleSize} type="button" className="btn btn-primary" onClick={handleNextClick}>Next &rarr;</button>
-        </div> */}
     </div>
   );
 };

@@ -11,10 +11,6 @@ function App() {
 
   const [progress, setProgress] = useState(0);
 
-  // const setProgress = (progress) => {
-  //   setbarProgress(progress);
-  // }
-
   return (
     <Router>
       <div>
@@ -23,7 +19,6 @@ function App() {
           color="#f11946"
           height={3}
           progress={progress}
-          // onLoaderFinished={() => setProgress(0)}
         />
         <Routes>
           <Route

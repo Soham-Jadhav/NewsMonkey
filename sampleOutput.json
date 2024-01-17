@@ -3,7 +3,10 @@
   "totalResults": 3,
   "articles": [
     {
-      "source": { "id": "news-com-au", "name": "News.com.au" },
+      "source": {
+        "id": "news-com-au",
+        "name": "News.com.au"
+      },
       "author": null,
       "title": "Cricket loses it for ‘catch of the century’",
       "description": "<p>Australian stand-in skipper Steve Smith has pulled off one of the most spectacular slips catchers you&rsquo;ll ever see during his side&rsquo;s hot start with the ball to the second ODI against India.</p>",
@@ -13,7 +16,10 @@
       "content": "Australian stand-in skipper Steve Smith has pulled off one of the most spectacular slips catchers you’ll ever see during his side’s hot start with the ball to the second ODI against India.\r\nSmith’s d… [+2443 chars]"
     },
     {
-      "source": { "id": "espn-cric-info", "name": "ESPN Cric Info" },
+      "source": {
+        "id": "espn-cric-info",
+        "name": "ESPN Cric Info"
+      },
       "author": null,
       "title": "PCB hands Umar Akmal three-year ban from all cricket | ESPNcricinfo.com",
       "description": "Penalty after the batsman pleaded guilty to not reporting corrupt approaches | ESPNcricinfo.com",
@@ -23,7 +29,10 @@
       "content": "Umar Akmal's troubled cricket career has hit its biggest roadblock yet, with the PCB handing him a ban from all representative cricket for three years after he pleaded guilty of failing to report det… [+1506 chars]"
     },
     {
-      "source": { "id": "espn-cric-info", "name": "ESPN Cric Info" },
+      "source": {
+        "id": "espn-cric-info",
+        "name": "ESPN Cric Info"
+      },
       "author": null,
       "title": "What we learned from watching the 1992 World Cup final in full again | ESPNcricinfo.com",
       "description": "Wides, lbw calls, swing - plenty of things were different in white-ball cricket back then | ESPNcricinfo.com",
